@@ -44,6 +44,29 @@ function App() {
     }
   ];
 
+  const specialPhotos = [
+  {
+    image: "/images/special5.jpg",
+    caption: "One of my favourite memories with you 💖 playful & fun😅"
+  },
+  {
+    image: "/images/special2.jpg",
+    caption: "A moment worth remembering forever ✨"
+  },
+  {
+    image: "/images/special4.jpg",
+    caption: "Beautiful queen👌, my beautiful queen "
+  },
+  {
+    image: "/images/special6.jpg",
+    caption: "Game park trip, remember it?...may we continue to be this happy 🤩"
+  },
+  {
+    image: "/images/special3.jpg",
+    caption: "Thank you for the beautiful memories 💕"
+  }
+];
+
   useEffect(() => {
     async function loadMessages() {
       try {
@@ -335,6 +358,35 @@ function App() {
         {activeTab === "special" && showSpecialTab && (
           <section className="mt-5">
             <div className="card letter-card shadow-sm">
+
+
+              <section className="mt-5">
+                <h3 className="fw-bold text-center mb-4">
+                  Special Memories 💖
+                </h3>
+
+                <div className="row g-4">
+                  {specialPhotos.map((photo, index) => (
+                    <div className="col-md-4" key={index}>
+                      <div className="card birthday-photo-card shadow-sm h-100">
+                        <img
+                          src={photo.image}
+                          alt={`Special memory ${index + 1}`}
+                          className="card-img-top birthday-image"
+                        />
+
+                        <div className="card-body text-center">
+                          <p className="card-text mb-0">
+                            {photo.caption}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+
               <div className="card-body p-4 p-md-5">
                 <h2 className="fw-bold mb-4">Dear Lala,</h2>
 
