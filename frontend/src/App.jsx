@@ -154,7 +154,7 @@ function App() {
               </div>
 
               <button className="btn btn-primary btn-lg w-100">
-                Open Surprise
+                Proceed
               </button>
             </form>
           </div>
