@@ -350,11 +350,17 @@ function App() {
                   growth, and blessings than you can imagine. May you always be
                   surrounded by people who appreciate you, celebrate you, and
                   remind you how loved you are.
+                  We are now on a journey to increase our family, I am more than 
+                  happy and ready to welcome our little girl 🤗
                 </p>
 
                 <p>
                   Thank you for being you. I hope this little surprise makes you
                   smile, because you deserve that and so much more.
+                </p>
+
+                <p>
+                  I love you, very much.
                 </p>
 
                 <p className="letter-signature">
