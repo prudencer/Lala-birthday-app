@@ -110,7 +110,7 @@ function App() {
       setBirthdayMessages([savedMessage, ...birthdayMessages]);
       setGuestName("");
       setGuestMessage("");
-      setMessageStatus("Your message has been added.");
+      setMessageStatus("Your message has been added. You can logout on top of page.");
     } catch (error) {
       setMessageStatus("Could not save message. Please try again.");
     }
