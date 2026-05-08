@@ -4,7 +4,7 @@ import "./index.css";
 
 function App() {
   const NORMAL_PASSWORD = "lame";
-  const SPECIAL_PASSWORD = "prudence";
+  const SPECIAL_PASSWORD = "prudence0329";
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
 
   const [username, setUsername] = useState("");
@@ -62,12 +62,12 @@ function App() {
   function handleLogin(e) {
     e.preventDefault();
     
-    if (username.trim() !== "Lame") {
+    if (username.trim().toLowerCase() !== "lame") {
       setError("Incorrect username.");
       return;
     }
 
-    if (password === NORMAL_PASSWORD) {
+    if (password.trim().toLowerCase() === NORMAL_PASSWORD.toLowerCase()) {
       setIsLoggedIn(true);
       setShowSpecialTab(false);
       setActiveTab("memories");
@@ -121,10 +121,12 @@ function App() {
       <div className="login-bg min-vh-100 d-flex align-items-center justify-content-center">
         <div className="card login-card shadow">
           <div className="card-body p-4">
-            <h1 className="text-center fw-bold mb-2">BLala&apos;s Birthday </h1>
-            <p className="text-center text-muted mb-4">
-              Username: Lame   \t password:lame
-            </p>
+            <h1 className="text-center fw-bold mb-2">Lala&apos;s Birthday </h1>
+              <p className="text-center text-muted mb-4">
+                Username: lame
+                <br />
+                Password: lame
+              </p>
 
             {error && <div className="alert alert-danger">{error}</div>}
 
@@ -211,9 +213,9 @@ function App() {
       <main className="container pb-5">
         <section className="birthday-card card shadow-sm">
           <div className="card-body text-center">
-            <h2 className="fw-bold mb-3">Birthday Memories</h2>
+            <h2 className="fw-bold mb-3">Happy Birthday Lala 🤩</h2>
             <p className="text-muted">
-              Five little moments, five little messages, and a whole lot of love.
+              May you have many more years, may you continue to be happy and blessed.
             </p>
 
             <div className="nav nav-pills justify-content-center mt-4 gap-2">
