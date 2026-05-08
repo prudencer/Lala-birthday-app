@@ -3,7 +3,7 @@ import { createMessage, getMessages } from "./services/api";
 import "./index.css";
 
 function App() {
-  const NORMAL_PASSWORD = "birthday";
+  const NORMAL_PASSWORD = "lame";
   const SPECIAL_PASSWORD = "prudence";
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
 
@@ -121,9 +121,9 @@ function App() {
       <div className="login-bg min-vh-100 d-flex align-items-center justify-content-center">
         <div className="card login-card shadow">
           <div className="card-body p-4">
-            <h1 className="text-center fw-bold mb-2">Birthday Login</h1>
+            <h1 className="text-center fw-bold mb-2">BLala&apos;s Birthday </h1>
             <p className="text-center text-muted mb-4">
-              Enter the secret details to open Lala&apos;s surprise.
+              Username: Lame   \t password:lame
             </p>
 
             {error && <div className="alert alert-danger">{error}</div>}
@@ -195,15 +195,14 @@ function App() {
             <p className="mb-4">
               Please help me wish Lala a happy birthday.
               <br /><br />
-              Close this window and scroll to the bottom of the page
-              to add your message 💖
+               Proceed to leave Lala your birthday message 💖
             </p>
 
             <button
               className="btn btn-primary px-4"
               onClick={() => setShowWelcomeModal(false)}
             >
-              Close
+              Proceed
             </button>
           </div>
         </div>
@@ -239,28 +238,8 @@ function App() {
 
         {activeTab === "memories" && (
           <>
-            <section className="mt-5">
-              <div className="row g-4">
-                {photos.map((photo, index) => (
-                  <div className="col-sm-6 col-md-4" key={index}>
-                    <div className="card h-100 birthday-photo-card shadow-sm">
-                      <img
-                        src={photo.image}
-                        alt={`Birthday memory ${index + 1}`}
-                        className="card-img-top birthday-image"
-                      />
-
-                      <div className="card-body text-center">
-                        <h5 className="fw-bold">Memory {index + 1}</h5>
-                        <p className="card-text">{photo.message}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="mt-5">
+          {/* MESSAGE FORM FIRST */}
+          <section className="mt-5">
               <div className="card birthday-card shadow-sm">
                 <div className="card-body">
                   <h3 className="fw-bold text-center mb-3">
@@ -302,6 +281,7 @@ function App() {
               </div>
             </section>
 
+            {/* EXISTING MESSAGES LAST */}
             <section className="mt-5">
               <h3 className="fw-bold text-center mb-4">Messages for Lala</h3>
 
@@ -324,6 +304,29 @@ function App() {
                 </div>
               )}
             </section>
+
+            {/* PHOTOS SECOND */}
+            <section className="mt-5">
+              <div className="row g-4">
+                {photos.map((photo, index) => (
+                  <div className="col-sm-6 col-md-4" key={index}>
+                    <div className="card h-100 birthday-photo-card shadow-sm">
+                      <img
+                        src={photo.image}
+                        alt={`Birthday memory ${index + 1}`}
+                        className="card-img-top birthday-image"
+                      />
+
+                      <div className="card-body text-center">
+                        <h5 className="fw-bold">Memory {index + 1}</h5>
+                        <p className="card-text">{photo.message}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
           </>
         )}
 
