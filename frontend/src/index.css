@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-bg {
+  background: #fff5f8;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #212529, #e83e8c);
+  padding: 70px 0 100px;
+  margin-bottom: -50px;
+}
+
+.birthday-card {
+  border: none;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+.birthday-photo-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.birthday-photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.birthday-image {
+  height: 320px;
+  object-fit: cover;
+  background: #f1f1f1;
+}
+
+.login-bg {
+  background: linear-gradient(135deg, #212529, #e83e8c);
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  border: none;
+  border-radius: 20px;
+}
+
+.letter-card {
+  border: none;
+  border-radius: 20px;
+  background: #fffdf8;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.letter-signature {
+  margin-top: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.message-card {
+  border: none;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.message-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.card-text {
+  color: #555;
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 50px 0 80px;
+  }
+
+  .birthday-image {
+    height: 260px;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+}
+
+.welcome-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.welcome-modal-card {
+  background: white;
+  border-radius: 22px;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.birthday-footer {
+  background: #282e34;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
