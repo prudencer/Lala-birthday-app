@@ -307,28 +307,6 @@ function App() {
             </section>
 
             {/* EXISTING MESSAGES LAST */}
-            <section className="mt-5">
-              <h3 className="fw-bold text-center mb-4">Messages for Lala</h3>
-
-              {birthdayMessages.length === 0 ? (
-                <p className="text-center text-muted">
-                  No messages yet. Be the first to leave one.
-                </p>
-              ) : (
-                <div className="row g-4">
-                  {birthdayMessages.map((item) => (
-                    <div className="col-sm-6 col-lg-4" key={item._id}>
-                      <div className="card message-card shadow-sm h-100">
-                        <div className="card-body">
-                          <h5 className="fw-bold">{item.name}</h5>
-                          <p>{item.message}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </section>
 
             {/* PHOTOS SECOND */}
             <section className="mt-5">
@@ -356,73 +334,99 @@ function App() {
         )}
 
         {activeTab === "special" && showSpecialTab && (
-          <section className="mt-5">
-            <div className="card letter-card shadow-sm">
+          <>
+            <section className="mt-5">
+              <div className="card letter-card shadow-sm">
+                <section className="mt-5">
+                  <h3 className="fw-bold text-center mb-4">
+                    Special Memories 💖
+                  </h3>
+
+                  <div className="row g-4">
+                    {specialPhotos.map((photo, index) => (
+                      <div className="col-md-4" key={index}>
+                        <div className="card birthday-photo-card shadow-sm h-100">
+                          <img
+                            src={photo.image}
+                            alt={`Special memory ${index + 1}`}
+                            className="card-img-top birthday-image"
+                          />
+
+                          <div className="card-body text-center">
+                            <p className="card-text mb-0">
+                              {photo.caption}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
 
 
-              <section className="mt-5">
-                <h3 className="fw-bold text-center mb-4">
-                  Special Memories 💖
-                </h3>
+                <div className="card-body p-4 p-md-5">
+                  <h2 className="fw-bold mb-4">Dear Lala,</h2>
 
+                  <p>
+                    Happy birthday to someone truly special. Today is not just
+                    about adding another year, but about celebrating the beautiful
+                    person you are, the joy you bring, and the memories you
+                    continue to create.
+                  </p>
+
+                  <p>
+                    I hope this new chapter brings you more laughter, peace, love,
+                    growth, and blessings than you can imagine. May you always be
+                    surrounded by people who appreciate you, celebrate you, and
+                    remind you how loved you are.
+                    We are now on a journey to increase our family, I am more than 
+                    happy and ready to welcome our little girl 🤗
+                  </p>
+
+                  <p>
+                    Thank you for being you. I hope this little surprise makes you
+                    smile, because you deserve that and so much more.
+                  </p>
+
+                  <p>
+                    I love you, very much.
+                  </p>
+
+                  <p className="letter-signature">
+                    With love,
+                    <br />
+                    Prudence
+                  </p>
+                </div>
+              </div>
+            </section>
+
+
+            <section className="mt-5">
+              <h3 className="fw-bold text-center mb-4">Messages for Lala</h3>
+
+              {birthdayMessages.length === 0 ? (
+                <p className="text-center text-muted">
+                  No messages yet. Be the first to leave one.
+                </p>
+              ) : (
                 <div className="row g-4">
-                  {specialPhotos.map((photo, index) => (
-                    <div className="col-md-4" key={index}>
-                      <div className="card birthday-photo-card shadow-sm h-100">
-                        <img
-                          src={photo.image}
-                          alt={`Special memory ${index + 1}`}
-                          className="card-img-top birthday-image"
-                        />
-
-                        <div className="card-body text-center">
-                          <p className="card-text mb-0">
-                            {photo.caption}
-                          </p>
+                  {birthdayMessages.map((item) => (
+                    <div className="col-sm-6 col-lg-4" key={item._id}>
+                      <div className="card message-card shadow-sm h-100">
+                        <div className="card-body">
+                          <h5 className="fw-bold">{item.name}</h5>
+                          <p>{item.message}</p>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </section>
+              )}
+            </section>
 
 
-              <div className="card-body p-4 p-md-5">
-                <h2 className="fw-bold mb-4">Dear Lala,</h2>
-
-                <p>
-                  Happy birthday to someone truly special. Today is not just
-                  about adding another year, but about celebrating the beautiful
-                  person you are, the joy you bring, and the memories you
-                  continue to create.
-                </p>
-
-                <p>
-                  I hope this new chapter brings you more laughter, peace, love,
-                  growth, and blessings than you can imagine. May you always be
-                  surrounded by people who appreciate you, celebrate you, and
-                  remind you how loved you are.
-                  We are now on a journey to increase our family, I am more than 
-                  happy and ready to welcome our little girl 🤗
-                </p>
-
-                <p>
-                  Thank you for being you. I hope this little surprise makes you
-                  smile, because you deserve that and so much more.
-                </p>
-
-                <p>
-                  I love you, very much.
-                </p>
-
-                <p className="letter-signature">
-                  With love,
-                  <br />
-                  Prudence
-                </p>
-              </div>
-            </div>
-          </section>
+          </>
         )}
       </main>
       <footer className="birthday-footer text-center text-white">
