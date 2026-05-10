@@ -4,7 +4,7 @@ import "./index.css";
 
 function App() {
   const NORMAL_PASSWORD = "lame";
-  const SPECIAL_PASSWORD = "prudence0329";
+  const SPECIAL_PASSWORD = "pru0329";
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
 
   const [username, setUsername] = useState("");
