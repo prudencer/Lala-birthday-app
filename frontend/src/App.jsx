@@ -432,7 +432,7 @@ function App() {
       <footer className="birthday-footer text-center text-white">
         <div className="container">
           <p className="mb-0">
-            For Lala 💖 Happy Birthday — Prudence
+            For Lala 💖 Happy Birthday — Prudence&trade;  &copy; 2026
           </p>
         </div>
       </footer>
